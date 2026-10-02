@@ -1,0 +1,11 @@
+{
+  "id": "spanvision",
+  "organizationName": "Spanvision Infra",
+  "productName": "IFC View",
+  "ownershipLabel": "by Spanvision Infra",
+  "description": "A Spanvision Infra product for viewing and sequencing IFC models.",
+  "version": "0.1.0",
+  "bundleIdentifier": "com.spanvisioninfra.ifcview",
+  "executableName": "ifc-view",
+  "windowTitle": "IFC View — Spanvision Infra"
+}

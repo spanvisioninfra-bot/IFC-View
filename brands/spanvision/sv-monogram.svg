@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Spanvision Infra monogram</title>
+  <rect width="512" height="512" rx="104" fill="#000"/>
+  <rect x="24" y="24" width="464" height="464" rx="82" fill="none" stroke="#fff" stroke-width="16"/>
+  <path d="M354 132H199c-43 0-71 24-71 61 0 39 28 59 72 66l84 13c20 3 30 11 30 25 0 17-13 26-38 26H129v58h151c60 0 104-31 104-88 0-48-29-73-87-82l-81-13c-14-2-21-8-21-18 0-11 10-17 29-17h130z" fill="#fff"/>
+  <path d="M129 282h70l57 99 57-99h71L288 432h-64z" fill="#999"/>
+</svg>
