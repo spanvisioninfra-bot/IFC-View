@@ -1,5 +1,9 @@
 # IFC View
 
+[![IFC View CI](https://github.com/spanvisioninfra-bot/IFC-View/actions/workflows/ci.yml/badge.svg)](https://github.com/spanvisioninfra-bot/IFC-View/actions/workflows/ci.yml)
+[![Vercel Production](https://github.com/spanvisioninfra-bot/IFC-View/actions/workflows/vercel.yml/badge.svg)](https://github.com/spanvisioninfra-bot/IFC-View/actions/workflows/vercel.yml)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fspanvisioninfra-bot%2FIFC-View)
+
 **IFC View by Spanvision Infra** is a desktop application for opening, inspecting, and sequencing IFC building models. IFC parsing and 3D rendering run locally on the user's computer.
 
 The current development version is **0.1.0**. The first stable Spanvision Infra release will be tagged **v1.0.0**.
@@ -40,7 +44,7 @@ The interface and 3D construction states use neutral grayscale values. Model geo
 
 Requirements:
 
-- Node.js 20 or later
+- Node.js 24
 - pnpm 11
 - Rust stable and the platform prerequisites listed by Tauri for native builds
 
@@ -58,6 +62,20 @@ Run the native desktop application with:
 ```bash
 pnpm tauri dev
 ```
+
+## CI/CD
+
+GitHub Actions runs brand validation, type checking, linting, tests, the web production build, and native Windows and Linux builds for pushes and pull requests targeting `main`.
+
+After CI succeeds on `main`, the Vercel production workflow builds and deploys the web application. Configure these repository secrets under **Settings → Secrets and variables → Actions**:
+
+- `VERCEL_TOKEN`: a Vercel access token
+- `VERCEL_ORG_ID`: the `orgId` from the linked Vercel project
+- `VERCEL_PROJECT_ID`: the `projectId` from the linked Vercel project
+
+The deployment URL is written to the Vercel workflow summary after every successful production deployment. The repository-level [vercel.json](vercel.json) keeps the monorepo build configuration consistent between dashboard and CI deployments.
+
+Pushing a `v*` tag runs the native release workflow and creates a draft GitHub release containing the desktop bundles.
 
 ## Release numbering
 
